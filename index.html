@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ta Te Ti</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="juego">
+    <header><span class="etiqueta">UN JUEGO PARA DOS</span><h1>Ta Te Ti<span>.</span></h1><p>Tres fichas. Una línea. Tu próxima jugada.</p></header>
+    <section class="panel" aria-label="Partida de tateti">
+      <div class="jugadores"><div class="jugador" id="jugador-X"><strong>X</strong><span>Jugador 1</span><small id="fichas-X">0 / 3 fichas</small></div><div class="jugador" id="jugador-O"><strong>O</strong><span>Jugador 2</span><small id="fichas-O">0 / 3 fichas</small></div></div>
+      <p id="estado" role="status" aria-live="polite"></p>
+      <div class="tablero" aria-label="Tablero de nueve casillas">
+        <button class="casilla" aria-label="Fila 1, columna 1" data-pos="0"></button>
+        <button class="casilla" aria-label="Fila 1, columna 2" data-pos="1"></button>
+        <button class="casilla" aria-label="Fila 1, columna 3" data-pos="2"></button>
+        <button class="casilla" aria-label="Fila 2, columna 1" data-pos="3"></button>
+        <button class="casilla" aria-label="Fila 2, columna 2" data-pos="4"></button>
+        <button class="casilla" aria-label="Fila 2, columna 3" data-pos="5"></button>
+        <button class="casilla" aria-label="Fila 3, columna 1" data-pos="6"></button>
+        <button class="casilla" aria-label="Fila 3, columna 2" data-pos="7"></button>
+        <button class="casilla" aria-label="Fila 3, columna 3" data-pos="8"></button>
+      </div>
+      <p id="ayuda">Colocá una ficha en una casilla vacía.</p>
+      <button id="reiniciar" class="reiniciar">Nueva partida</button>
+    </section>
+    <details><summary>Cómo jugar</summary><ol><li>Juegan dos personas en el mismo dispositivo. Empieza X.</li><li>Por turnos, cada jugador coloca sus tres fichas en casillas vacías.</li><li>Cuando están las seis fichas, seleccioná una propia y después una casilla vacía vecina. En esta implementación, el punto más cercano es una casilla contigua horizontal o vertical, sin saltar fichas.</li><li>Gana quien forma una línea de tres fichas horizontal, vertical o diagonal.</li></ol><p>Para evitar partidas interminables, se declara empate si la misma posición y turno se repiten tres veces. Esta condición es un agregado del juego digital.</p><a href="https://www.iafas.gov.ar/wp-content/uploads/2024/11/TATETI-Reglamento.pdf" target="_blank" rel="noopener noreferrer">Ver reglamento de IAFAS</a></details>
+    <footer>HTML · CSS · JavaScript</footer>
+  </main>
+</body>
+</html>
